@@ -1,0 +1,26 @@
+//WAP to print the maximum and minimum element of an array.
+
+#include <iostream>
+using namespace std;
+ int main() {
+        int size1;
+        cout << "Enter size"<<endl;
+        cin >> size1;
+        int arr[size1];
+        for (int i = 0; i < size1; i++)
+        {
+            cin >> arr[i];
+        }
+        int max = arr[0];
+        int min = arr[0];
+        for (int i = 1; i < size1; i++)
+        {
+            if (arr[i] > max)
+                max = arr[i];
+            if (arr[i] < min)
+                min = arr[i];
+        }
+        cout <<"maximum "<< max << endl<< "minimum "<<min<<endl;
+        return 0;
+    }
+
