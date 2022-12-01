@@ -1,0 +1,43 @@
+//Write a program to arrange the elements of an array in ascending order.
+
+#include <iostream>
+using namespace std;
+#define size 1000
+
+int main()
+{
+	//array declaration
+	int arr[size];
+	int n,i,j;
+	int temp;
+
+	cout<<"Enter size of array "<< endl;
+	cin>>n;
+	
+	//read n elements
+	for(i=0;i<n;i++)
+	{
+		cout<<"Enter "<<i+1<<" element"<< endl;
+		cin>>arr[i];
+	}
+	
+	//print unsorted elements
+	cout<<"Unsorted Array elements:"<<endl;
+	for(i=0;i<n;i++)
+		cout<<arr[i]<<"\t";
+	cout<<endl;
+	
+	//sorting - ASCENDING ORDER
+	for(i=0;i<n;i++)
+	{		
+		for(j=i+1;j<n;j++)
+		{
+			if(arr[i]>arr[j])
+			{
+				temp  =arr[i];
+				arr[i]=arr[j];
+				arr[j]=temp;
+			}
+		}
+	}
+
